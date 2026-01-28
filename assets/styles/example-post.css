@@ -11,8 +11,8 @@
 }
 
 ._image {
-	margin-block: 1em;
-	justify-content: center;
+	display: block;
+	margin: 1.5em auto;
 }
 
 ._quote {
