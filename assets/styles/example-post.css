@@ -12,6 +12,7 @@
 
 ._image {
 	margin-block: 1em;
+	justify-content: center;
 }
 
 ._quote {
