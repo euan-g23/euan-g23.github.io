@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Euan Genuino">
+	<meta name="description" content="Aeroelastic flutter modelling using MATLAB and Simulink.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dynamic Aeroelastic Flutter Modelling | Euan Genuino</title>
+
+	<link rel="icon" type="image/x-icon" href="#">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/example-post.css">
+</head>
+
+<body>
+
+<header class="container__">
+	<h1 class="__header-title">
+		<a href="../../index.html">Euan Genuino</a>
+	</h1>
+	<nav class="__header-nav">
+		<ul>
+			<li><a href="../../index.html">Home</a></li>
+			<li><a href="./about.html">About</a></li>
+			<li><a href="./posts.html">Projects</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main class="container__">
+
+<section class="__post">
+
+	<!-- HERO IMAGE (optional placeholder for now) -->
+	<img class="_thumbnail"
+	     src="https://picsum.photos/800/400?grayscale"
+	     width="800" height="400"
+	     alt="Aeroelastic flutter simulation visual.">
+
+	<!-- TITLE + DATE -->
+	<div class="_title-date">
+		<h2>Dynamic Aeroelastic Flutter Modelling</h2>
+		<time datetime="2024"><i>2024 · MSc Coursework</i></time>
+	</div>
+
+	<!-- SHORT ABSTRACT (RECRUITER OPTIMISED) -->
+	<p>
+		A dynamic aeroelastic flutter model was developed for a two-dimensional aerofoil using MATLAB
+		and Simulink, incorporating coupled plunge and pitch motion and later extended to include a
+		trailing-edge flap. The simulations were used to identify flutter onset and assess stability
+		sensitivity to aerodynamic and structural parameters. The work highlights both the effectiveness
+		of reduced-order aeroelastic models and the practical challenges involved in extending them to
+		higher-fidelity configurations.
+	</p>
+
+	<!-- AT A GLANCE -->
+	<h3 class="_secondary-title">At a Glance</h3>
+	<ul class="_list">
+		<li><strong>Methods:</strong> Reduced-order aeroelastic modelling (2DOF → 3DOF)</li>
+		<li><strong>Tools:</strong> MATLAB, Simulink</li>
+		<li><strong>Focus:</strong> Flutter onset, stability analysis, model extension</li>
+	</ul>
+
+	<!-- CONTEXT -->
+	<h3 class="_secondary-title">Problem Context</h3>
+	<p>
+		Aeroelastic flutter represents a critical dynamic instability driven by the coupling between
+		aerodynamic loading and structural response. Reduced-order models are widely used during early
+		design stages, but their validity and limitations must be well understood when extending model
+		fidelity or incorporating additional degrees of freedom.
+	</p>
+
+	<!-- MODELLING APPROACH -->
+	<h3 class="_secondary-title">Modelling Approach</h3>
+	<p>
+		The aerofoil was modelled initially as a two-degree-of-freedom system with coupled plunge and
+		pitch motion, implemented in MATLAB and Simulink. Aerodynamic forcing was represented using
+		linear unsteady aerodynamics, with time-domain simulations used to assess dynamic stability
+		under varying flow conditions. The model was later extended to include a trailing-edge flap,
+		introducing an additional degree of freedom.
+	</p>
+
+	<!-- RESULTS -->
+	<h3 class="_secondary-title">Key Results</h3>
+	<p>
+		The simulations successfully identified flutter onset through divergence in time-domain
+		responses. While the 2DOF model exhibited stable and interpretable behaviour, the introduction
+		of a flap increased system sensitivity and highlighted numerical and formulation challenges
+		associated with higher-order aeroelastic models.
+	</p>
+
+	<!-- LIMITATIONS -->
+	<h3 class="_secondary-title">Limitations & Engineering Lessons</h3>
+	<p>
+		The study demonstrated that while reduced-order aeroelastic models are effective for identifying
+		flutter trends, extending them to higher-fidelity configurations requires careful formulation
+		and validation. The work emphasised the importance of model transparency, stability diagnostics,
+		and understanding the limits of simplified aerodynamic assumptions.
+	</p>
+
+	<!-- NAVIGATION -->
+	<nav class="_bottom-navigation" aria-label="bottom-navigation">
+		<ul>
+			<li><a href="../../index.html">Home</a></li>
+			<span aria-hidden="true">-</span>
+			<li><a href="./posts.html">Projects</a></li>
+		</ul>
+	</nav>
+
+</section>
+
+<div id="notice">
+	Page source:
+	<a href="https://github.com/euan-g23/euan-g23.github.io">GitHub repository</a>
+</div>
+
+</main>
+
+<footer>
+	<p class="__footer-copyright">
+		&copy; Euan Genuino — Engineering portfolio
+	</p>
+</footer>
+
+</body>
+</html>
