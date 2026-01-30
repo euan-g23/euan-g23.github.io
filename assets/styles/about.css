@@ -7,4 +7,5 @@
 	width: 14.0625rem;
 	aspect-ratio: 1/1;
 	margin: 0 auto;
+	filter:grayscale(100%);
 }
