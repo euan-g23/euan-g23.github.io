@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="EG">
+	<meta name="description" content="A simple template for a blog site.">
+	<meta name="keywords" content="blog, template, blog template, blog site, blog post, blog post template, simple blog template">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BEng Thesis EG</title>
+
+	<link rel="icon" type="image/x-icon" href="#">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/example-post.css">
+</head>
+<body>
+	<header class="container__">
+		<h1 class="__header-title"><a href="../../index.html">EG</a></h1>
+		<nav class="__header-nav">
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./posts.html">Projects</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container__">
+<section class="__post">
+
+  <!-- HERO IMAGE -->
+  <img class="_thumbnail"
+       src="../images/beng-thesis/beng-thesis-sim-model-EG.png"
+       width="400" height="200"
+       alt="Example figure from the BEng Lattice Boltzmann dissertation (geometry, streamline plot, or validation chart).">
+
+  <!-- TITLE + DATE -->
+  <div class="_title-date">
+    <h2>Assessment of Lattice Boltzmann Tools for Aerodynamic Research</h2>
+    <time datetime="2024-05"><i>2024 · BEng Final Year Project</i></time>
+  </div>
+
+  <!-- PROJECT SNAPSHOT -->
+  <p>
+    A dissertation evaluating the Lattice Boltzmann Method (LBM) as an alternative CFD approach for
+    aerodynamic research, using the open-source Palabos solver to simulate airflow around an urban
+    two-building model. The project was motivated by unsteady wind effects around buildings and their
+    potential impact on air ambulance operations in dense urban environments.
+  </p>
+
+  <!-- AT A GLANCE -->
+  <h3 class="_secondary-title">At a Glance</h3>
+  <ul class="_list">
+    <li><strong>Methods:</strong> Lattice Boltzmann Method (LBM), CFD validation, mesh resolution comparison</li>
+    <li><strong>Case Study:</strong> Two-building “channelling effect” / urban bluff-body flow</li>
+    <li><strong>Tools:</strong> Palabos (C++), Linux/MPI, Creo (CAD), ParaView, MATLAB</li>
+    <li><strong>Focus:</strong> Solver setup, stability, post-processing, comparison to wind-tunnel/CFD reference data</li>
+  </ul>
+
+  <!-- CONTEXT -->
+  <h3 class="_secondary-title">Problem Context</h3>
+  <p>
+    Flow around buildings can produce localised acceleration, turbulence, and recirculation—particularly
+    within narrow passages between structures (the “channelling effect”). These unsteady conditions are
+    relevant to operational safety for low-altitude aircraft and heliport planning. This project investigated
+    whether LBM tools can practically simulate these aerodynamic features on limited computing resources,
+    and how reliably results can be validated against established reference studies.
+  </p>
+
+  <!-- WORKFLOW -->
+  <h3 class="_secondary-title">Simulation Workflow</h3>
+  <img class="_image"
+       src="../images/beng-thesis/beng-thesis-workflow-EG.png"
+       width="200" height="200"
+       alt="Workflow figure showing building geometry, domain setup, or a ParaView post-processing output.">
+  <img class="_image"
+       src="../images/beng-thesis/beng-thesis-gantt-EG.png"
+       width="200" height="100"
+       alt="project gantt chart">
+  <p>
+    The workflow began with familiarisation and benchmarking of Palabos using a standard 2D cavity case,
+    before progressing to a 3D two-building configuration based on published literature. The building
+    geometry was replicated in Creo and exported for use in Palabos, with simulations executed using a
+    Linux environment and MPI to utilise available CPU resources. Post-processing in ParaView was used
+    to extract key quantities (e.g., velocity profiles at pedestrian height, streamline patterns, and temporal
+    stability behaviour), with additional plotting and processing performed in MATLAB where needed.
+  </p>
+
+  <!-- RESULTS -->
+  <h3 class="_secondary-title">Key Results</h3>
+  <img class="_image"
+        src="../images/beng-thesis/beng-thesis-recirc-streamline-EG.png"
+        width="200" height="200"
+        alt="Representative result figure such as velocity ratio validation, streamline comparison, or turbulence intensity plot.">
+
+  <p>
+    The Palabos LBM setup successfully reproduced qualitative flow features expected for bluff-body urban
+    aerodynamics, including recirculation regions behind buildings and accelerated flow through the channel.
+    A resolution comparison (dx = 2 m vs dx = 4 m) indicated that finer spacing moved results closer to
+    reference trends, but overall quantitative agreement with published velocity ratios and turbulence intensity
+    data remained weak due to coarse grid limitations and measurement sensitivity at pedestrian height.
+    Time-history monitoring of velocity components was used to assess solution stability and select appropriate
+    sampling windows for post-processing.
+  </p>
+
+  <!-- LIMITATIONS -->
+  <h3 class="_secondary-title">Limitations & Lessons</h3>
+  <p>
+    The primary limitation was computational resource, which constrained grid resolution and therefore the
+    ability to match validation datasets in highly turbulent near-ground regions. The project highlighted the
+    importance of (1) selecting validation metrics that are robust to spatial resolution, (2) monitoring stability
+    and convergence before extracting data, and (3) documenting solver setup and post-processing steps so the
+    study can be repeated under improved hardware conditions. The work also reinforced the learning curve
+    associated with open-source CFD tooling (Linux, MPI, C++ build environments), and how these skills
+    translate directly into practical simulation workflow capability.
+  </p>
+
+  <!-- NAVIGATION -->
+  <nav class="_bottom-navigation" aria-label="bottom-navigation">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <span aria-hidden="true">-</span>
+      <li><a href="./posts.html">Projects</a></li>
+    </ul>
+  </nav>
+
+</section>
+
+	<footer>
+	<p class="__footer-copyright">
+		&copy; Euan Genuino — Engineering portfolio
+	</p>
+	<p>
+		Site template adapted from westtle/simple-blog-template and hosted on GitHub Pages
+	</p>
+</footer>
+</body>
+</html>
