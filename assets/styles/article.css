@@ -6,6 +6,7 @@
 .article-thumbnail_ {
 	max-height: 10rem;
 	object-fit: cover;
+	filter:grayscale(100%);
 }
 
 .article-flex__ {
