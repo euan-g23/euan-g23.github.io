@@ -126,4 +126,10 @@ footer {
 	.__header-nav ul {
 		gap: 2.25rem;
 	}
+@media (prefers-color-scheme: dark) {
+  body { background: #0b0b0b; color: #eaeaea; }
+  a { color: #9ad; }
+  /* etc */
+}
+
 }
