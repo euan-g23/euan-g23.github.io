@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="westtle">
+	<meta name="description" content="A simple template for a blog site.">
+	<meta name="keywords" content="blog, template, blog template, blog site, blog post, blog post template, simple blog template">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MSc Thesis EG</title>
+
+	<link rel="icon" type="image/x-icon" href="#">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/example-post.css">
+</head>
+<body>
+	<header class="container__">
+		<h1 class="__header-title"><a href="../../index.html">EG</a></h1>
+		<nav class="__header-nav">
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./posts.html">Projects</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container__">
+<section class="__post">
+
+  <!-- HERO IMAGE -->
+  <img class="_thumbnail"
+       src="../images/Mesh_fig1_MSC_THESIS.png"
+       width="400" height="200"
+       alt="Mesh_fig1_MSC_THESIS.">
+
+  <!-- TITLE + DATE -->
+  <div class="_title-date">
+    <h2>High-Speed Water Droplet Impact Modelling</h2>
+    <time datetime="2025-01"><i>2025 · MSc Project</i></time>
+  </div>
+
+  <!-- PROJECT SNAPSHOT -->
+  <p>
+    Numerical investigation of short-duration, high-speed water droplet impact using a compressible
+    multiphase CFD solver. The work focuses on modelling assumptions, solver configuration,
+    and pressure evolution relevant to erosion analysis in turbomachinery contexts.
+  </p>
+
+  <!-- AT A GLANCE -->
+  <h3 class="_secondary-title">At a Glance</h3>
+  <ul class="_list">
+    <li><strong>Methods:</strong> Compressible multiphase CFD, transient simulation</li>
+    <li><strong>Tools:</strong> ECOGEN, ParaView, HPC</li>
+    <li><strong>Focus:</strong> Pressure response, mesh refinement, numerical stability</li>
+  </ul>
+
+  <!-- CONTEXT -->
+  <h3 class="_secondary-title">Problem Context</h3>
+  <p>
+    High-speed droplet impacts are a key contributor to leading-edge erosion in turbine blades.
+    Capturing the short-duration pressure response requires careful consideration of compressibility
+    effects, interface treatment, and spatial resolution.
+  </p>
+
+  <!-- WORKFLOW -->
+  <h3 class="_secondary-title">Simulation Workflow</h3>
+  <img class="_image"
+       src="../images/Schlieren_fig5_MSC_THESIS.png"
+       width="200"height="200"
+       
+       alt="Schlieren plot of target deformation.">
+
+  <p>
+    The workflow was developed to balance physical fidelity with computational cost.
+    Particular emphasis was placed on justifying compressible modelling assumptions
+    and assessing sensitivity to mesh refinement and solver parameters.
+  </p>
+
+  <!-- RESULTS -->
+  <h3 class="_secondary-title">Key Results</h3>
+  <img class="_image"
+        src="../images/Schlieren_fig5_MSC_THESIS.png"
+        width="200"height="200"
+       
+        alt="Schlieren plot of target deformation.">
+        
+  <p>
+    Peak pressure magnitude and temporal evolution were strongly influenced by local mesh resolution.
+    Increasing refinement beyond a threshold yielded diminishing returns relative to computational cost.
+  </p>
+
+  <!-- LIMITATIONS -->
+  <h3 class="_secondary-title">Limitations & Lessons</h3>
+  <p>
+    The study was limited by available computational resources and simplified material response.
+    The work highlighted the importance of clearly defining validity limits when interpreting
+    transient CFD results.
+  </p>
+
+  <!-- NAVIGATION -->
+  <nav class="_bottom-navigation" aria-label="bottom-navigation">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <span aria-hidden="true">-</span>
+      <li><a href="./posts.html">Projects</a></li>
+    </ul>
+  </nav>
+
+</section>
+
+	<footer>
+	<p class="__footer-copyright">
+		&copy; Euan Genuino — Engineering portfolio
+	</p>
+	<p>
+		Site template adapted from westtle/simple-blog-template and hosted on GitHub Pages
+	</p>
+</footer>
+</body>
+</html>
