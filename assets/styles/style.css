@@ -1,24 +1,59 @@
-:root {
-	--font-size-primary: 0.906rem; /* 14.5px */
-	--font-size-secondary: 0.688rem; /* 11px */
+/* =========================================================
+   Global / Root
+   ========================================================= */
 
+:root {
+	/* Typography */
+	--font-size-primary: 0.906rem;   /* 14.5px */
+	--font-size-secondary: 0.688rem; /* 11px */
+	--font-size-button: 0.769rem;    /* 12.3px */
+
+	/* Spacing */
+	--seven: 0.438rem;  /* 7px */
+	--twelve: 0.75rem;  /* 12px */
+
+	/* Theme (Light default) */
+	--bg: #ffffff;
 	--foreground: rgba(0, 0, 0, 0.75);
+	--muted-foreground: rgba(0, 0, 0, 0.60);
 
 	--border-color: rgba(0, 0, 0, 0.55);
 	--border-shorthand: 0.063rem solid var(--border-color);
 
-	/* Button */
-	--button-hover-foreground: rgba(255, 255, 255, 0.9);
-	--button-hover-backround: rgba(0, 0, 0, 0.78);
-	--font-size-button: 0.769rem; /* 12.3px */
+	/* Links */
+	--link: rgba(0, 0, 0, 0.80);
 
-	--seven: 0.438rem; /* 7px */
-	--twelve: 0.75rem; /* 12px */
+	/* Buttons */
+	--button-hover-foreground: rgba(255, 255, 255, 0.9);
+	--button-hover-background: rgba(0, 0, 0, 0.78);
+
+	/* Footer */
+	--footer-bg: rgba(0, 0, 0, 0.75);
+	--footer-fg: rgba(255, 255, 255, 0.95);
 }
 
-*, *::before, *::after {
-	color: var(--foreground);
+/* =========================================================
+   Resets / Base
+   ========================================================= */
+
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
+}
+
+/* Important:
+   Your original CSS forced all elements to use --foreground.
+   We keep the same behaviour but make it themeable via variables. */
+*,
+*::before,
+*::after {
+	color: var(--foreground);
+}
+
+html {
+	/* Helps built-in form controls pick the correct palette */
+	color-scheme: light dark;
 }
 
 body {
@@ -26,13 +61,24 @@ body {
 	margin: 0;
 	font-size: var(--font-size-primary);
 	text-align: justify;
+
+	background: var(--bg);
+	color: var(--foreground);
+}
+
+a {
+	color: var(--link);
+	text-decoration: none;
+	padding-block-end: 0.0625rem;
 }
 
 img {
 	display: block;
 	height: auto;
 	max-width: 100%;
-	filter:grayscale(100%);
+
+	/* Keep if you want the grayscale look site-wide */
+	filter: grayscale(100%);
 }
 
 .container__ {
@@ -41,19 +87,17 @@ img {
 	padding: 0 calc(var(--twelve) * 2);
 }
 
-/* Header */
+/* =========================================================
+   Header
+   ========================================================= */
 
 header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	border-block-end: var(--border-shorthand);
 	margin-block-end: 1.75rem;
-}
-
-header a {
-	padding-block-end: 0.0625rem;
-	text-decoration: none;
 }
 
 .__header-nav ul {
@@ -68,24 +112,43 @@ header a {
 	border-block-end: var(--border-shorthand);
 }
 
-/* Footer */
+/* Hover underline */
+@media (hover: hover) {
+	.__header-nav ul li a:hover {
+		border-block-end: var(--border-shorthand);
+	}
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
 
 footer {
-	color: white;
-	background: var(--foreground);
+	background: var(--footer-bg);
+	color: var(--footer-fg);
+
 	padding: 1em calc(var(--twelve) * 2);
 	margin-block-start: 2.5rem;
 	text-align: center;
 
+	/* Stick footer to bottom if content is short */
 	position: sticky;
 	inset-block-start: 100%;
+}
+
+/* Footer text inherits footer color */
+footer,
+footer * {
+	color: inherit;
 }
 
 .__footer-copyright {
 	color: inherit;
 }
 
-/* Notice / Link */
+/* =========================================================
+   Notice
+   ========================================================= */
 
 #notice {
 	margin-top: 0.656rem;
@@ -96,20 +159,15 @@ footer {
 	word-wrap: break-word;
 }
 
-/* Media Query */
-
-@media (hover: hover) {
-	.__header-nav ul li a:hover {
-		border-block-end: var(--border-shorthand);
-	}
-}
+/* =========================================================
+   Responsive
+   ========================================================= */
 
 @media (max-width: 30rem) {
-	/* Font Size */
+	/* Slightly smaller base font size on small screens */
 	html {
 		font-size: calc(1rem - 10%);
 	}
-	/* -------- */
 
 	header {
 		flex-direction: column;
@@ -126,10 +184,34 @@ footer {
 	.__header-nav ul {
 		gap: 2.25rem;
 	}
-@media (prefers-color-scheme: dark) {
-  body { background: #0b0b0b; color: #eaeaea; }
-  a { color: #9ad; }
-  /* etc */
 }
 
+/* =========================================================
+   Dark Mode (Auto, based on OS preference)
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0b0b0b;
+
+		--foreground: rgba(255, 255, 255, 0.88);
+		--muted-foreground: rgba(255, 255, 255, 0.70);
+
+		--border-color: rgba(255, 255, 255, 0.30);
+
+		--link: rgba(170, 210, 255, 0.95);
+
+		/* Buttons (invert hover) */
+		--button-hover-foreground: rgba(0, 0, 0, 0.90);
+		--button-hover-background: rgba(255, 255, 255, 0.85);
+
+		/* Footer */
+		--footer-bg: rgba(255, 255, 255, 0.10);
+		--footer-fg: rgba(255, 255, 255, 0.90);
+	}
+
+	/* If you ever add form fields, this helps in dark mode */
+	input, textarea, select, button {
+		color-scheme: dark;
+	}
 }
