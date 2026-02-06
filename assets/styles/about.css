@@ -10,28 +10,4 @@
 	filter:grayscale(100%);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: #0b0b0b;
 
-		--foreground: rgba(255, 255, 255, 0.88);
-		--muted-foreground: rgba(255, 255, 255, 0.70);
-
-		--border-color: rgba(255, 255, 255, 0.30);
-
-		--link: rgba(170, 210, 255, 0.95);
-
-		/* Buttons (invert hover) */
-		--button-hover-foreground: rgba(0, 0, 0, 0.90);
-		--button-hover-background: rgba(255, 255, 255, 0.85);
-
-		/* Footer */
-		--footer-bg: rgba(255, 255, 255, 0.10);
-		--footer-fg: rgba(255, 255, 255, 0.90);
-	}
-
-	/* If you ever add form fields, this helps in dark mode */
-	input, textarea, select, button {
-		color-scheme: dark;
-	}
-}
