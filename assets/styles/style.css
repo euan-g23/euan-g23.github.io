@@ -193,3 +193,13 @@ footer * {
    Dark Mode (Auto, based on OS preference)
    ========================================================= */
 
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}

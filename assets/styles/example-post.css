@@ -41,3 +41,13 @@
 
 ._bottom-navigation a { text-decoration: none; }
 
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
