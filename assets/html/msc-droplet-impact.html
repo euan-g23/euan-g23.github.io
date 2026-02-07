@@ -41,9 +41,10 @@
 
   <!-- PROJECT SNAPSHOT -->
   <p>
-    Numerical investigation of short-duration, high-speed water droplet impact using a compressible
-    multiphase CFD solver. The work focuses on modelling assumptions, solver configuration,
-    and pressure evolution relevant to erosion analysis in turbomachinery contexts.
+    A numerical investigation into short-duration, high-speed water droplet impact using
+    a compressible multiphase CFD approach. The project examined solver configuration,
+    mesh refinement strategy, and transient pressure response, with relevance to erosion
+    mechanisms in turbine and high-speed flow applications.
   </p>
 
   <!-- AT A GLANCE -->
@@ -51,21 +52,22 @@
   <ul class="_list">
     <li><strong>Methods:</strong> Compressible multiphase CFD, transient simulation</li>
     <li><strong>Tools:</strong> ECOGEN, ParaView, HPC</li>
-    <li><strong>Focus:</strong> Pressure response, mesh refinement, numerical stability</li>
+    <li><strong>Focus:</strong> Pressure evolution, mesh sensitivity, solver behaviour</li>
   </ul>
 
   <!-- CONTEXT -->
   <h3 class="_secondary-title">Problem Context</h3>
   <p>
-    High-speed droplet impacts are a key contributor to leading-edge erosion in turbine blades.
+    High-speed droplet impacts generate extreme, short-duration pressure loads and are a
+    known contributor to leading-edge erosion in turbine blades and similar structures.
   <img class="_image"
        src="../images/msc-thesis/msc-thesis-simschems.png"
        width="400"height="400"
-       
        alt="Schematics of simulation">
 
-    Capturing the short-duration pressure response requires careful consideration of compressibility
-    effects, interface treatment, and spatial resolution.
+    Accurately capturing this response numerically requires careful treatment of
+    compressibility effects, multiphase interfaces, and spatial resolution during the
+    early stages of impact.
   </p>
 
   <!-- WORKFLOW -->
@@ -73,13 +75,13 @@
   <img class="_image"
        src="../images/msc-thesis/msc-thesis-workflow.png"
        width="400"height="400"
-       
        alt="Schlieren plot of target deformation.">
 
   <p>
-    The workflow was developed to balance physical fidelity with computational cost.
-    Particular emphasis was placed on justifying compressible modelling assumptions
-    and assessing sensitivity to mesh refinement and solver parameters.
+    A simulation workflow was developed to balance physical fidelity with computational
+    cost. Particular emphasis was placed on justifying the use of a compressible solver,
+    applying mesh refinement in regions of interest, and assessing sensitivity to key
+    numerical parameters within practical HPC constraints.
   </p>
 
   <!-- RESULTS -->
@@ -87,20 +89,22 @@
   <img class="_image"
         src="../images/msc-thesis/Schlieren_fig5_MSC_THESIS.png"
         width="200"height="200"
-       
         alt="Schlieren plot of target deformation.">
         
   <p>
-    Peak pressure magnitude and temporal evolution were strongly influenced by local mesh resolution.
-    Increasing refinement beyond a threshold yielded diminishing returns relative to computational cost.
+    The simulations captured early-stage pressure evolution and shock formation during
+    droplet impact. Peak pressure magnitude and temporal response were strongly influenced
+    by local mesh resolution, with increased refinement improving solution trends while
+    exhibiting diminishing returns relative to computational cost.
   </p>
 
   <!-- LIMITATIONS -->
   <h3 class="_secondary-title">Limitations & Lessons</h3>
   <p>
-    The study was limited by available computational resources and simplified material response.
-    The work highlighted the importance of clearly defining validity limits when interpreting
-    transient CFD results.
+    The study highlighted the sensitivity of transient multiphase simulations to solver
+    configuration, mesh resolution, and timestep selection. It reinforced the importance
+    of clearly defining validity limits and numerical assumptions when interpreting
+    short-duration CFD results.
   </p>
 
   <!-- NAVIGATION -->
