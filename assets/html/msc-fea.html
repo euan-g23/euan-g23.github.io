@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="EG">
+	<meta name="description" content="Finite element analysis of a helicopter rotor hub and optimisation study using Abaqus.">
+	<meta name="keywords" content="FEA, Abaqus, rotor hub, optimisation, engineering portfolio">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MSc FEA & Optimisation EG</title>
+
+```
+<link rel="icon" type="image/x-icon" href="#">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel="stylesheet" type="text/css" href="../styles/example-post.css">
+```
+
+</head>
+<body>
+	<header class="container__">
+		<h1 class="__header-title"><a href="../../index.html">EG</a></h1>
+		<nav class="__header-nav">
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./posts.html">Projects</a></li>
+			</ul>
+		</nav>
+	</header>
+
+```
+<main class="container__">
+```
+
+<section class="__post">
+
+  <!-- HERO IMAGE -->
+
+<img class="_thumbnail"
+    src="../images/msc-fea/fea-rotorhub-contour-EG.png"
+    width="400" height="400"
+    alt="Finite element stress contour of a rotor hub.">
+
+  <!-- TITLE + DATE -->
+
+  <div class="_title-date">
+    <h2>Finite Element Analysis of a Rotor Hub</h2>
+    <time datetime="2025-03"><i>2025 · MSc Project</i></time>
+  </div>
+
+  <!-- SNAPSHOT -->
+
+  <p>
+    A finite element analysis of a helicopter rotor hub to investigate structural behaviour under loading.
+    The project explores mesh sensitivity, stress distribution, and a simple design refinement. A secondary
+    study introduces topology optimisation to examine stiffness-to-weight trade-offs.
+  </p>
+
+  <!-- AT A GLANCE -->
+
+  <h3 class="_secondary-title">At a Glance</h3>
+  <ul class="_list">
+    <li><strong>Methods:</strong> FEA, mesh refinement, optimisation</li>
+    <li><strong>Tools:</strong> Abaqus</li>
+    <li><strong>Focus:</strong> Structural response, modelling choices, performance trade-offs</li>
+  </ul>
+
+  <!-- CONTEXT -->
+
+  <h3 class="_secondary-title">Problem Context</h3>
+  <p>
+    Rotor hubs transfer loads from rotor blades to the central shaft and are subject to significant
+    mechanical stress. This study examines how modelling choices influence predicted stress distribution
+    and overall structural behaviour.
+  </p>
+
+  <!-- WORKFLOW -->
+
+  <h3 class="_secondary-title">Approach</h3>
+  <img class="_image"
+       src="../images/msc-fea/fea-workflow-EG.png"
+       width="400" height="400"
+       alt="FEA workflow and model setup.">
+
+  <p>
+    A simplified geometry was analysed in Abaqus with representative loading and boundary conditions.
+    Multiple mesh configurations were tested to assess solution stability, and different element types
+    were compared to understand their influence on results.
+  </p>
+
+  <!-- RESULTS -->
+
+  <h3 class="_secondary-title">Key Results</h3>
+  <img class="_image"
+        src="../images/msc-fea/fea-convergence-graph-EG.png"
+        width="400" height="200"
+        alt="Mesh sensitivity results.">
+
+  <p>
+    Mesh refinement influenced both stress and displacement predictions, with some configurations showing
+    more consistent behaviour than others. Areas of high stress were observed near geometric features
+    associated with load transfer.
+  </p>
+
+  <!-- DESIGN -->
+
+  <h3 class="_secondary-title">Design Insight</h3>
+  <p>
+    A simple geometric modification improved load distribution across the structure, reducing localised
+    stress concentrations and highlighting the importance of structural continuity.
+  </p>
+
+  <!-- OPTIMISATION -->
+
+  <h3 class="_secondary-title">Optimisation Study</h3>
+  <img class="_image"
+        src="../images/msc-fea/fea-optimisation-vf-EG.png"
+        width="400" height="200"
+        alt="Topology optimisation results.">
+
+  <p>
+    A topology optimisation study explored how reducing material volume affects stiffness. Results showed
+    that moderate material reduction can maintain structural performance while improving efficiency.
+  </p>
+
+  <!-- LESSONS -->
+
+  <h3 class="_secondary-title">Key Takeaways</h3>
+  <p>
+    The project highlights how modelling decisions—such as mesh selection and simplification—can influence
+    simulation outcomes. It also demonstrates the balance required between model detail, computational cost,
+    and practical engineering insight.
+  </p>
+
+  <!-- NAV -->
+
+  <nav class="_bottom-navigation" aria-label="bottom-navigation">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <span aria-hidden="true">-</span>
+      <li><a href="./posts.html">Projects</a></li>
+    </ul>
+  </nav>
+
+</section>
+
+<footer>
+	<p class="__footer-copyright">
+		&copy; Euan Genuino — Engineering portfolio
+	</p>
+	<p>
+		Site template adapted from westtle/simple-blog-template and hosted on GitHub Pages
+	</p>
+</footer>
+</body>
+</html>
