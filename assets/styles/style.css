@@ -81,7 +81,7 @@ img {
 	max-width: 100%;
 
 	/* Keep if you want the grayscale look site-wide */
-	/*filter: grayscale(100%);/*
+	/*filter: grayscale(100%);*/
 }
 
 .container__ {
