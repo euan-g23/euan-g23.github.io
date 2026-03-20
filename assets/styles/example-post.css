@@ -13,7 +13,6 @@
 ._image {
 	display: block;
 	margin: 1.5em auto;
-	filter:grayscale(100%);
 }
 
 ._quote {
