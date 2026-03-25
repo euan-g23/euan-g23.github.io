@@ -41,10 +41,13 @@
 
   <!-- PROJECT SNAPSHOT -->
   <p>
-    A numerical investigation into short-duration, high-speed water droplet impact using
-    a compressible multiphase CFD approach. The project examined solver configuration,
-    mesh refinement strategy, and transient pressure response, with relevance to erosion
-    mechanisms in turbine and high-speed flow applications.
+  <p>
+  A numerical investigation into short-duration, high-speed water droplet impact using
+  a compressible multiphase CFD approach. The project examined solver configuration,
+  mesh refinement strategy, and transient pressure response, with comparison to
+  published studies to assess solution validity. The work is relevant to erosion
+  mechanisms in turbine blades and high-speed flow applications.
+</p>
   </p>
 
   <!-- AT A GLANCE -->
@@ -57,18 +60,18 @@
 
   <!-- CONTEXT -->
   <h3 class="_secondary-title">Problem Context</h3>
-  <p>
-    High-speed droplet impacts generate extreme, short-duration pressure loads and are a
-    known contributor to leading-edge erosion in turbine blades and similar structures.
+<p>
+  High-speed droplet impacts generate extreme, short-duration pressure loads and are a
+  known contributor to leading-edge erosion in turbine blades and similar structures.
   <img class="_image"
        src="../images/msc-thesis/msc-thesis-simschems.png"
-       width="400"height="400"
+       width="400" height="400"
        alt="Schematics of simulation">
 
-    Accurately capturing this response numerically requires careful treatment of
-    compressibility effects, multiphase interfaces, and spatial resolution during the
-    early stages of impact.
-  </p>
+  Accurately capturing this response numerically requires careful treatment of
+  compressibility effects, multiphase interfaces, and sufficient spatial resolution
+  during the early stages of impact.
+</p>
 
   <!-- WORKFLOW -->
   <h3 class="_secondary-title">Simulation Workflow</h3>
@@ -77,12 +80,13 @@
        width="400"height="400"
        alt="Schlieren plot of target deformation.">
 
-  <p>
-    A simulation workflow was developed to balance physical fidelity with computational
-    cost. Particular emphasis was placed on justifying the use of a compressible solver,
-    applying mesh refinement in regions of interest, and assessing sensitivity to key
-    numerical parameters within practical HPC constraints.
-  </p>
+<p>
+  A simulation workflow was developed to balance physical fidelity with computational
+  cost. Particular emphasis was placed on justifying the use of a compressible solver,
+  applying mesh refinement in regions of interest, and assessing sensitivity to key
+  numerical parameters. HPC resources were used to manage trade-offs between resolution,
+  output frequency, and runtime efficiency.
+</p>
 
   <!-- RESULTS -->
   <h3 class="_secondary-title">Key Results</h3>
@@ -91,21 +95,25 @@
         width="200"height="200"
         alt="Schlieren plot of target deformation.">
         
-  <p>
-    The simulations captured early-stage pressure evolution and shock formation during
-    droplet impact. Peak pressure magnitude and temporal response were strongly influenced
-    by local mesh resolution, with increased refinement improving solution trends while
-    exhibiting diminishing returns relative to computational cost.
-  </p>
+<p>
+  The simulations captured key early-stage impact physics, including pressure evolution
+  and shock formation during droplet impact. Results showed qualitative agreement with
+  published studies, particularly in central pressure trends and deformation behaviour.
+  Peak pressure magnitude and temporal response were strongly influenced by local mesh
+  resolution, with increased refinement improving solution trends while exhibiting
+  diminishing returns relative to computational cost.
+</p>
 
   <!-- LIMITATIONS -->
   <h3 class="_secondary-title">Limitations & Lessons</h3>
-  <p>
-    The study highlighted the sensitivity of transient multiphase simulations to solver
-    configuration, mesh resolution, and timestep selection. It reinforced the importance
-    of clearly defining validity limits and numerical assumptions when interpreting
-    short-duration CFD results.
-  </p>
+ <p>
+  The study highlighted the sensitivity of transient multiphase simulations to solver
+  configuration, mesh resolution, and timestep selection. Limitations in temporal
+  resolution and output frequency restricted the ability to capture finer-scale
+  phenomena such as jetting behaviour. The work reinforced the importance of clearly
+  defining validity limits and numerical assumptions when interpreting short-duration
+  CFD results.
+</p>
 
   <!-- NAVIGATION -->
   <nav class="_bottom-navigation" aria-label="bottom-navigation">
